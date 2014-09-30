@@ -1,0 +1,21 @@
+{
+  "name": "first-responders",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "marking-surface": "^0.6.8",
+    "publisssh": "^0.2.6",
+    "stack-of-pages": "^0.1.5",
+    "trash": "^1.1.3",
+    "zooniverse": "^0.7.1",
+    "zooniverse-decision-tree": "0.0.2",
+    "zooniverse-readymade": "^0.5.2"
+  },
+  "scripts": {
+    "start": "zooniverse-readymade serve --port 5319 --css ./project.styl",
+    "stage": "npm run build && publisssh ./build demo.zooniverse.org/first-responders && npm run clean-up",
+    "build": "zooniverse-readymade build --force --output ./build --css ./project.styl",
+    "clean-up": "trash ./build"
+  }
+}
