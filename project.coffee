@@ -1,7 +1,7 @@
 # MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
 module.exports =
-  id: 'TODO'
+  id: 'first_responder'
   background: 'http://upload.wikimedia.org/wikipedia/commons/7/75/Sign_first_aid.svg'
 
   producer: 'The name of your group'
