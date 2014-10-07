@@ -13,9 +13,9 @@
     "zooniverse-readymade": "^0.5.2"
   },
   "scripts": {
-    "start": "zooniverse-readymade serve --port 5319 --css ./project.styl",
+    "start": "zooniverse-readymade serve --port 5319 --css ./project.styl --js custom.coffee",
     "stage": "npm run build && publisssh ./build demo.zooniverse.org/first-responders && npm run clean-up",
-    "build": "zooniverse-readymade build --force --output ./build --css ./project.styl",
+    "build": "zooniverse-readymade build --force --output ./build --css ./project.styl --js custom.coffee",
     "clean-up": "trash ./build"
   }
 }

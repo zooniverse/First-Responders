@@ -1,3 +1,38 @@
+MEDIUM_GRAY = #555
+
 #readymade
-  // Overrides default styles here!
+  [name="decision-tree-go-back"]
+    display: none
+  
+  // apparently this doesn't work since the readymade styles aren't loaded yet
+  // @extends #_DECISION_TREE_META_BUTTON
+  [name="decision-tree-before-and-after"]
+    background: transparent
+    border: 0
+    color: inherit
+    cursor: pointer
+    font: inherit
+    line-height: inherit
+    margin: 0
+    padding: 0
+    text-shadow: inherit
+    
+    &:disabled
+      opacity: 0.5
+      pointer-events: none
+    
+    background: rgba(MEDIUM_GRAY, 0.5)
+    border: 1px solid
+    border-radius: 3px
+    display: block
+    font-size: 12px
+    font-weight: bold
+    letter-spacing: 1px
+    line-height: 1
+    margin: 2em auto
+    padding: 0.5em 0
+    position: relative
+    text-align: center
+    text-transform: uppercase
+    width: 7em
 
