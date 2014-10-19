@@ -12,21 +12,21 @@ module.exports =
   tasks:
     features:
       type: 'drawing',
-      question: 'Select and mark any of the follow features.',
+      question: 'Select and mark any of the following features.',
       choices: [{
         type: 'point'
-        value: 'people',
-        label: 'People'
+        value: 'crowd',
+        label: 'Crowd of People'
         color: 'orange'
       }, {
         type: 'point'
-        value: 'road_blockage',
-        label: 'Road blockage'
+        value: 'blocked_road',
+        label: 'Blocked Road'
         color: 'gray'
       }, {
         type: 'point'
         value: 'tarp',
-        label: 'Tarp'
+        label: 'Tarp/Shelter'
         color: 'teal'
       }, {
         type: 'point'
@@ -43,17 +43,14 @@ module.exports =
           question: 'Approximate damage assessment:'
           key: 'damage_assessment'
           choices: [{
-            value: 0 / 3
-            label: '<strong>Mild:</strong> probably only exterior damage'
+            value: 0 / 2
+            label: '<strong>Mild to Moderate:</strong> visible, but structure intact'
           }, {
-            value: 1 / 3
-            label: '<strong>Moderate:</strong> possible risk of collapse'
+            value: 1 / 2
+            label: '<strong>Severe:</strong> major damage, but structure still recognizable'
           }, {
-            value: 2 / 3
-            label: '<strong>Dangerous:</strong> collapsed walls or roof'
-          }, {
-            value: 3 / 3
-            label: '<strong>Severe:</strong> near complete destruction'
+            value: 2 / 2
+            label: '<strong>Total:</strong> collapsed walls/roof or structure unrecognizable'
           }]
         }]
       }]
