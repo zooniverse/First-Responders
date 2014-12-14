@@ -4,10 +4,10 @@ module.exports =
   id: 'first_responder'
   background: 'http://upload.wikimedia.org/wikipedia/commons/7/75/Sign_first_aid.svg'
 
-  producer: 'The name of your group'
-  title: 'First Responders'
-  summary: 'A catchy phrase summing up the project'
-  description: 'This is a brief but slightly more detailed project description.'
+  producer: 'Typhoon Haiyan (Yolanda)'
+  title: 'The Planetary Response Network'
+  summary: 'Join the effort to help victims of this crisis'
+  description: 'Your help is needed to examine the affected areas and help humanitarian organizations provide aid.'
 
   tasks:
     features:
