@@ -22,7 +22,7 @@ tutorialSteps =
   first:
     header: 'Welcome!'
     content: '''
-      In the aftermath of Typhoon Haiyan (aka Yolanda), we need your help to identify property damage and displaced people in the Phillippines.
+      We need your help to identify damaged property and displaced people in real images from a 2013 typhoon in the Philippines (Typhoon Haiyan, aka Yolanda). Your classifications will be used to help us analyze classifications from future live crises.
       <BR /><BR />
 	  This short guide will show you how to spot and mark certain features.
     '''
