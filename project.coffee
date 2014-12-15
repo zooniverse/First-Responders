@@ -5,8 +5,8 @@ module.exports =
   background: 'http://upload.wikimedia.org/wikipedia/commons/7/75/Sign_first_aid.svg'
 
   producer: 'Typhoon Haiyan (Yolanda)'
-  title: 'The Planetary Response Network'
-  summary: 'Join the effort to help victims of this crisis'
+  title: 'The Planetary Response Network: Beta'
+  summary: 'Join the relief effort to help crisis victims'
   description: 'Your help is needed to examine the affected areas and help humanitarian organizations provide aid.'
 
   tasks:
