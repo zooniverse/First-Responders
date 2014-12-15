@@ -1,5 +1,6 @@
 project = require 'zooniverse-readymade/current-project'
 {Tutorial} = require 'zootorial'
+User = require 'zooniverse/models/user'
 
 classifyPage = project.classifyPages[0]
 
