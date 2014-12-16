@@ -22,7 +22,7 @@ tutorialSteps =
   first:
     header: 'Welcome!'
     content: '''
-      We need your help to identify damaged property and displaced people in real images from a 2013 typhoon in the Philippines (Typhoon Haiyan, aka Yolanda). Your classifications will be used to help us analyze classifications from future live crises.
+      We need your help to identify damaged property and displaced people in real images of the aftermath of Typhoon Haiyan, which struck the Philippines in 2013. Your classifications will be used to help us analyze classifications from future live crises.
       <BR /><BR />
 	  This short guide will show you how to spot and mark certain features.
     '''
@@ -45,7 +45,7 @@ tutorialSteps =
     content: '''
 	  This is a satellite image of an affected area. Clicking the “Show Before” and “Show After” buttons switches between pre- and post-typhoon images.
       <BR /><BR />
-	  Use the before images to tell whether something has changed due to the typhoon and should be marked. <EM>If it looks damaged even in the before image, you don’t need to mark it.</EM>
+	  Switch between images to tell whether something has changed due to the typhoon and should be marked. <EM>If it looks damaged even in the before image, you don’t need to mark it.</EM>
     '''
     attachment: [0, 0.5, '.marking-surface', 0.05, 0.3]
     next: ->
@@ -124,7 +124,7 @@ tutorialSteps =
 
   markTarp:
     content: '''
-      In each image, mark the center of each tarp you see.
+      <EM>In each image, mark the center of <STRONG>each</STRONG> tarp you see.</EM>
     '''
     instruction: '''
       Mark the center of the tarp.
@@ -156,26 +156,28 @@ tutorialSteps =
 
   callOutOthers:
     content: '''
-      There are also other things we’re looking out for, like crowds, temporary shelters, blocked roads, and flooding.
+      There are also other things we’re looking out for, like crowds, blocked roads, and flooding.
     '''
     attachment: [1, 0.5, '.marking-surface', 0.95, 0.65]
     arrow: 'right'
     next: 'callOutHelp'
 
-
+  # as this step is currently the second-to-last one I'd like them to finish the classification here, possibly by 
+  # making them click "Done", but I'm unsure how to handle the Talk question, then, which I think they should 
+  # skip during the tutorial. Telling them to click "Done" and then "No" seems awkward. Can we do it automatically?
   callOutHelp:
     content: '''
-      The spotter’s guide below shows examples of important features, including how to tell a tarp apart from a permanent roof that’s a tarp-like color. 
+      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp apart from a permanent roof that’s a tarp-like color. 
     '''
     attachment: [0.5, 1, '.marking-surface', 0.5, 0.95]
     arrow: 'bottom'
-    next: 'callOutSignIn'
+    next: 'theEnd'
 
-
+  # Currently skipping this step.
   callOutSignIn:
     content: '''
-      Please sign in to help us process our data more efficiently.
-      You’ll receive credit for your work, and be able to mark images as "favorites" for later.
+      Please sign in to help us process our data more efficiently.<BR />
+      You’ll receive credit for your work, and be able to save images to discuss later.
     '''
     next: 'theEnd'
 
@@ -191,12 +193,12 @@ tutorialSteps =
   callOutFavorite:
     content: '''
       If you find a particularly interesting image, click this star before you submit your classification.
-      You’ll be able to find it later in your Favorites collection in Talk.
+      You’ll be able to find it later in your collections in Talk.
     '''
     next: 'theEnd'
 
 
-
+  
   theEnd:
     content: '''
       Each image is reviewed by several volunteers, so don’t be discouraged by a difficult one.
