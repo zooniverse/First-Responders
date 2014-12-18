@@ -21,40 +21,25 @@ We ask you to distinguish between damage that is: <EM>Mild/moderate</EM>, <EM>Se
 <BR /><BR />
 In high resolution images, crowds are pretty easy to spot. At lower resolution, it can get harder. Just do your best.'
   figures: [{
-    image: './field-guide/crowds_high_res.png'
-    label: 'Although you can see individuals in high-resolution images, you don’t need to mark each one. Just mark the center of the crowd.'
-  }, {
-    image: './field-guide/crowds_med_res.png'
-    label: 'When the resolution is lower, use the before image to see where people are gathering. Please mark the center of the crowd.'
-  }, {
-    image: './field-guide/crowds_low_res.png'
-    label: 'It can be hard to spot crowds of people in lower-resolution images. Just do your best; thanks.'
+    image: './field-guide/crowd.png'
+    label: 'Although you can see individuals in high-resolution images, you don’t need to mark each one. Just mark the center of the crowd. When the resolution is lower, use the before image to see where people are gathering. Please mark the center of the crowd.'
   }]
 }, {
   label: 'Road Blockage'
-  content: 'Marking where roads are blocked by debris is important to humanitarian organizations since they need to know which roads they can use to deliver much needed supplies such as food and water. Roads may be blocked by downed trees and power lines that have fallen over. Roads may also be blocked by other objects have have been washed up or blown onto the road. Basically, if a road does not look like it is passable with a car, please mark the area of the road that is most obstructed.'
+  content: 'Humanitarian organizations need to know which roads they should avoid when trying to deliver supplies such as food and water. Roads may be blocked by downed trees, fallen power lines or objects have have been washed up or blown onto the road. If a road does not look like it is passable with a car, please mark the area of the road that is most obstructed.'
   figures: [{
-    image: './field-guide/roadblocked_highres.png'
-    label: 'High resolution version (UAV)'
+    image: './field-guide/blockedroad_tree.png'
+    label: 'Downed trees blocking the road.'
   }, {
-    image: './field-guide/roadblocked_mediumres.png'
-    label: 'Medium resolution version (satellite)'
-  }, {
-    image: './field-guide/roadblocked_lowres.png'
-    label: 'Low resolution version (satellite)'
+    image: './field-guide/blockedroad_rubble.png'
+    label: 'Rubble blocking the road.'
   }]
 }, {
   label: 'Flooding'
   content: 'Identifying flooded areas is important to humanitarian organizations for several reasons. First, flooded areas are key pointers to locations that have been most affected by a disaster like a Typhoon. In addition, standing water (water that is not moving) is particularly problematic in terms of mosquitos. So please mark the center of flooded areas including areas with standing water.'
   figures: [{
-    image: './field-guide/flooding_highres.png'
-    label: 'High resolution version (UAV)'
-  }, {
-    image: './field-guide/flooding_mediumres.png'
-    label: 'Medium resolution version (satellite)'
-  }, {
-    image: './field-guide/flooding_lowres.png'
-    label: 'Low resolution version (satellite)'
+    image: './field-guide/flooding.png'
+    label: 'Comparison with the pre-crisis images is very helpful for spotting flooding.'
   }]
 }, {
   label: 'Tarp/Temporary Shelter'
