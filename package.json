@@ -10,7 +10,7 @@
     "trash": "^1.1.3",
     "zooniverse": "^0.7.1",
     "zooniverse-decision-tree": "0.0.2",
-    "zooniverse-readymade": "^0.5.2",
+    "zooniverse-readymade": "zooniverse/zooniverse-readymade#allow-full-translation",
     "zootorial": "^0.4.12"
   },
   "scripts": {
