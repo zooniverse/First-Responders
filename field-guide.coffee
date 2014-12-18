@@ -1,10 +1,10 @@
 module.exports = [{
   label: 'Structural Damage'
   content: 'If a structure is damaged, first responders and aid organizations need to know how severe the damage is so they can decide what action to take.
-<BR /><BR />
-First, please click on the center of the structure. This really helps us group everyone’s tags together. If it’s not clear where the center is, <STRONG>use the before image</STRONG> to give a best guess.
-<BR /><BR />
-We ask you to distinguish between damage that is: <EM>Mild/moderate</EM>, <EM>Severe</EM>, and <EM>Total</EM>.'
+    <BR /><BR />
+    First, please click on the center of the structure. This really helps us group everyone’s tags together. If it’s not clear where the center is, <STRONG>use the before image</STRONG> to give a best guess.
+    <BR /><BR />
+    We ask you to distinguish between damage that is: <EM>Mild/moderate</EM>, <EM>Severe</EM>, and <EM>Total</EM>.'
   figures: [{
     image: './field-guide/damagemild_moderate.png'
     label: '<EM>Mild or Moderate:</EM> There is clearly damage, but the structure seems like it could still be used or inhabited.'
@@ -18,8 +18,8 @@ We ask you to distinguish between damage that is: <EM>Mild/moderate</EM>, <EM>Se
 }, {
   label: 'Crowds'
   content: 'Marking where groups of people are gathering helps tell decision makers where to send aid. Marking individuals is not as helpful to aid organizations, because individuals often move around a lot, and rapidly, during and after a crisis. If you see a group that looks like it’s made of 10 or more people, please mark the center of the crowd.
-<BR /><BR />
-In high resolution images, crowds are pretty easy to spot. At lower resolution, it can get harder. Just do your best.'
+    <BR /><BR />
+    In high resolution images, crowds are pretty easy to spot. At lower resolution, it can get harder. Just do your best.'
   figures: [{
     image: './field-guide/crowd.png'
     label: 'Although you can see individuals in high-resolution images, you don’t need to mark each one. Just mark the center of the crowd. When the resolution is lower, use the before image to see where people are gathering. Please mark the center of the crowd.'
@@ -44,8 +44,8 @@ In high resolution images, crowds are pretty easy to spot. At lower resolution, 
 }, {
   label: 'Tarp/Temporary Shelter'
   content: 'Tarps and other temporary shelters are important to locate as they point to where displaced populations have been forced to relocate. Tarps tend to be blue or white, while temporary shelters are typically made of non-durable materials. Tarps are often clustered together in camps, but nevertheless, <STRONG>please try to mark the center of each tarp you can distinguish</STRONG>. Temporary shelters are not always grouped together. In that case, please mark each individually.
-<BR /><BR />
-Some permanent rooftops may be a similar color to a tarp. You can often tell them apart by the way the light hits them. Tarps are usually a little unevenly spread, so the light and shadow isn’t as uniform as it is on a permanent roof. Also, permanent roofs will be present in the before images.'
+    <BR /><BR />
+    Some permanent rooftops may be a similar color to a tarp. You can often tell them apart by the way the light hits them. Tarps are usually a little unevenly spread, so the light and shadow isn’t as uniform as it is on a permanent roof. Also, permanent roofs will be present in the before images.'
   figures: [{
     image: './field-guide/tarp.png'
     label: 'This is a group of tarps indicating a temporary shelter. <STRONG>Please mark the center of each tarp you see, even if they overlap.</STRONG>'
