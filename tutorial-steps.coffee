@@ -22,7 +22,7 @@ tutorialSteps =
   first:
     header: 'Welcome!'
     content: '''
-      We need your help to identify damaged property and displaced people in real images of the aftermath of Typhoon Haiyan, which struck the Philippines in 2013. Your classifications will be used to help us analyze classifications from future live crises.
+      We need your help to identify damaged property and displaced people in real images of the aftermath of Typhoon Haiyan, which struck the Philippines in 2013. Your classifications will be used to help us analyze classifications from future crises.
       <BR /><BR />
 	  This short guide will show you how to spot and mark certain features.
     '''
@@ -33,7 +33,7 @@ tutorialSteps =
   tips:
     header: 'Some general tips'
     content: '''
-      Some of the images you’ll see are high resolution, and others are lower resolution. We show each image to multiple people and then combine the inputs to provide information to humanitarian organizations. So it’s okay if you’re not always certain – your best guess is very helpful.
+      Image quality (resolution) is mixed. We show all images to multiple people and then combine the inputs into an averaged result. We give this combined map to humanitarian organisations. Your best guess is all we need - don't worry if you miss something.
     '''
     next: ->
       'callOutToggle'
@@ -45,7 +45,7 @@ tutorialSteps =
     content: '''
 	  This is a satellite image of an affected area. Clicking the “Show Before” and “Show After” buttons switches between pre- and post-typhoon images.
       <BR /><BR />
-	  Switch between images to tell whether something has changed due to the typhoon and should be marked. <EM>If it looks damaged even in the before image, you don’t need to mark it.</EM>
+	  <EM>We only need you to mark things that have changed because of the typhoon.</EM>
     '''
     attachment: [0, 0.5, '.marking-surface', 0.05, 0.3]
     next: ->
@@ -167,7 +167,7 @@ tutorialSteps =
   # skip during the tutorial. Telling them to click "Done" and then "No" seems awkward. Can we do it automatically?
   callOutHelp:
     content: '''
-      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp apart from a permanent roof that’s a tarp-like color. 
+      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp from from other, similar structures. 
     '''
     attachment: [0.5, 1, '.marking-surface', 0.5, 0.95]
     arrow: 'bottom'
