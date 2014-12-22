@@ -24,11 +24,11 @@ tutorialSteps =
     content: '''
       We need your help to identify damaged property and displaced people in real images of the aftermath of Typhoon Haiyan, which struck the Philippines in 2013. Your classifications will be used to help us analyze classifications from future crises.
       <BR /><BR />
-	  This short guide will show you how to spot and mark certain features.
+      This short guide will show you how to spot and mark certain features.
     '''
     next: ->
       'tips'
-      
+
 
   tips:
     header: 'Some general tips'
@@ -37,19 +37,19 @@ tutorialSteps =
     '''
     next: ->
       'callOutToggle'
-        
-  
-  # The attachment here is just so it shifts a little, so users re-focus  
+
+
+  # The attachment here is just so it shifts a little, so users re-focus
   callOutToggle:
     header: 'Change Detection'
     content: '''
-	  This is a satellite image of an affected area. Clicking the “Show Before” and “Show After” buttons switches between pre- and post-typhoon images.
+      This is a satellite image of an affected area. Clicking the “Show Before” and “Show After” buttons switches between pre- and post-typhoon images.
       <BR /><BR />
-	  <EM>We only need you to mark things that have changed because of the typhoon.</EM>
+      <EM>We only need you to mark things that have changed because of the typhoon.</EM>
     '''
     attachment: [0, 0.5, '.marking-surface', 0.05, 0.3]
     next: ->
-      if @classifier.surface.tool::name is 'structural_damage'
+      if @classifier.subjectViewer.toolOptions?.value is 'structural_damage'
         'markStructure'
       else
         'selectStructureTool'
@@ -59,21 +59,21 @@ tutorialSteps =
   # if so it will have to be changed in the tarp step too.
   selectStructureTool:
     content: '''
-      We are looking for signs of damage to buildings and structures, and signs of where people might be gathering or living in temporary shelters. 
-    <BR /><BR />
-	    This image has a few damaged buildings.
+      We are looking for signs of damage to buildings and structures, and signs of where people might be gathering or living in temporary shelters.
+      <BR /><BR />
+      This image has a few damaged buildings.
     '''
     instruction: '''
-      Select the “Structural Damage” tool on the right. 
+      Select the “Structural Damage” tool on the right.
     '''
     attachment: [1, 0.5, '.marking-surface', 0.95, 0.8]
     #attachment: [1, 0.5, '.classify button[name="structural_damage"]', 0, 0.5]
     arrow: 'right'
-    actionable: '[name="tool"][value="structural_damage"]'
-    next: 'click [name="tool"][value="structural_damage"]': 'markStructure'
-    
+    actionable: '[name="features"][value="structural_damage"] + .readymade-choice-clickable'
+    next: 'change [name="features"][value="structural_damage"]': 'markStructure'
 
-  # I'm not sure the "Next" part of this is right, because they have to classify 
+
+  # I'm not sure the "Next" part of this is right, because they have to classify
   # the amount of damage before it moves on, which is the second click required.
   markStructure:
     content: '''
@@ -84,27 +84,27 @@ tutorialSteps =
     '''
     attachment: [0.5, 1, '.marking-surface', 0.45, 0.55]
     onLoad: ->
-      @guide = @classifier.surface.addShape 'circle',
+      @guide = @classifier.subjectViewer.markingSurface.addShape 'circle',
         r: 60
         transform: 'translate(370,300)'
       @guide.attr guideStyle
-      
-      @extantMarks = (mark for mark in @classifier.surface.marks)
-      
+
+      @extantMarks = (mark for {mark} in @classifier.subjectViewer.markingSurface.tools)
+
     onUnload: ->
       @guide.remove()
-      
+
     next:
-      'mouseup .marking-surface': ->
-        newMarks = (mark for mark in @classifier.surface.marks when mark not in @extantMarks)
-  
-        if newMarks.some((mark) -> isAbout mark.center, [370, 300])
+      'click [name="readymade-dismiss-details"]': ->
+        newMarks = (mark for {mark} in @classifier.subjectViewer.markingSurface.tools when mark not in @extantMarks)
+
+        if newMarks.some((mark) -> isAbout [mark.x, mark.y], [370, 300])
           'selectTarpTool'
         else
           false
 
       'touchend .marking-surface': ->
-        @._current.next['mouseup .marking-surface'].apply @, arguments
+        @._current.next['click [name="readymade-dismiss-details"]'].apply @, arguments
 
 
 
@@ -118,8 +118,8 @@ tutorialSteps =
     attachment:[1, 0.5, '.marking-surface', 0.95, 0.75]
     #attachment: [1, 0.5, '.classify button[name="tarp"]', 0, 0.5]
     arrow: 'right'
-    actionable: '[name="tool"][value="tarp"]'
-    next: 'click [name="tool"][value="tarp"]': 'markTarp'
+    actionable: '[name="features"][value="tarp"] + .readymade-choice-clickable'
+    next: 'change [name="features"][value="tarp"]': 'markTarp'
 
 
   markTarp:
@@ -131,21 +131,22 @@ tutorialSteps =
     '''
     attachment: [1, 1, '.marking-surface', 0.4375, 0.5]
     onLoad: ->
-      @guide = @classifier.surface.addShape 'circle',
+      @guide = @classifier.subjectViewer.markingSurface.addShape 'circle',
         r: 60
         transform: 'translate(410, 220)'
       @guide.attr guideStyle
-      
-      @extantMarks = (mark for mark in @classifier.surface.marks)
-      
+
+      @extantMarks = (mark for {mark} in @classifier.subjectViewer.markingSurface.tools)
+
     onUnload: ->
       @guide.remove()
-      
+
     next:
       'mouseup .marking-surface': ->
-        newMarks = (mark for mark in @classifier.surface.marks when mark not in @extantMarks)
-  
-        if newMarks.some((mark) -> isAbout mark.center, [370, 300])
+        newMarks = (mark for {mark} in @classifier.subjectViewer.markingSurface.tools when mark not in @extantMarks)
+        console.log m for m in newMarks
+
+        if newMarks.some((mark) -> isAbout [mark.x, mark.y], [410, 220])
           'callOutOthers'
         else
           false
@@ -162,12 +163,12 @@ tutorialSteps =
     arrow: 'right'
     next: 'callOutHelp'
 
-  # as this step is currently the second-to-last one I'd like them to finish the classification here, possibly by 
-  # making them click "Done", but I'm unsure how to handle the Talk question, then, which I think they should 
+  # as this step is currently the second-to-last one I'd like them to finish the classification here, possibly by
+  # making them click "Done", but I'm unsure how to handle the Talk question, then, which I think they should
   # skip during the tutorial. Telling them to click "Done" and then "No" seems awkward. Can we do it automatically?
   callOutHelp:
     content: '''
-      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp from from other, similar structures. 
+      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp from from other, similar structures.
     '''
     attachment: [0.5, 1, '.marking-surface', 0.5, 0.95]
     arrow: 'bottom'
@@ -181,7 +182,7 @@ tutorialSteps =
     '''
     next: 'theEnd'
 
-    
+
   # currently skipping this and the favorites step.
   # don't really like calling it a "favorite" anyway when it's an image of real destruction.
   callOutButSkipTalk:
@@ -198,14 +199,14 @@ tutorialSteps =
     next: 'theEnd'
 
 
-  
+
   theEnd:
     content: '''
       Each image is reviewed by several volunteers, so don’t be discouraged by a difficult one.
-      Just try your best, and thanks. 
+      Just try your best, and thanks.
 
       Click “Next” to start tagging!
     '''
-    
-            
+
+
 module.exports = tutorialSteps
