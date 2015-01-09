@@ -56,3 +56,5 @@ module.exports =
       }]
 
   firstTask: 'features'
+
+  examples: require './field-guide'
