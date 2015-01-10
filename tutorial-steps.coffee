@@ -66,7 +66,7 @@ tutorialSteps =
     instruction: '''
       Select the “Structural Damage” tool on the right.
     '''
-    attachment: [1, 0.5, '.marking-surface', 0.95, 0.8]
+    attachment: [1, 0.5, '.marking-surface', 0.95, 0.65]
     #attachment: [1, 0.5, '.classify button[name="structural_damage"]', 0, 0.5]
     arrow: 'right'
     actionable: '[name="features"][value="structural_damage"] + .readymade-choice-clickable'
@@ -115,7 +115,7 @@ tutorialSteps =
     instruction: '''
       Select the “Tarp/Temporary Shelter” tool.
     '''
-    attachment:[1, 0.5, '.marking-surface', 0.95, 0.75]
+    attachment:[1, 0.5, '.marking-surface', 0.95, 0.5]
     #attachment: [1, 0.5, '.classify button[name="tarp"]', 0, 0.5]
     arrow: 'right'
     actionable: '[name="features"][value="tarp"] + .readymade-choice-clickable'
@@ -159,7 +159,7 @@ tutorialSteps =
     content: '''
       There are also other things we’re looking out for, like crowds, blocked roads, and flooding.
     '''
-    attachment: [1, 0.5, '.marking-surface', 0.95, 0.65]
+    attachment: [1, 0.5, '.marking-surface', 0.95, 0.35]
     arrow: 'right'
     next: 'callOutHelp'
 
@@ -203,9 +203,9 @@ tutorialSteps =
   theEnd:
     content: '''
       Each image is reviewed by several volunteers, so don’t be discouraged by a difficult one.
-      Just try your best, and thanks.
+      Just try your best, and thanks.<BR /><BR />
 
-      Click “Next” to start tagging!
+      Click “Done” to finish the tutorial and "OK" to move on to a new image.
     '''
 
 
