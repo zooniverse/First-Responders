@@ -5,15 +5,15 @@ module.exports = ->
   Subject.instances.shift() if Subject.instances?[0]?.tutorial
 
   subject = new Subject
-    id: 'TODO_TUTORIAL_SUBJECT_ID'
+    id: '54b307877b9f996e29000001'
     coords: [0, 0]
     location:
       before: './tutorial-images/before.jpg'
       standard: './tutorial-images/standard.jpg'
     metadata: {}
-    project_id: 'TODO_PROJECT_ID'
+    project_id: '5432c7433ae7404eca000001'
     tutorial: true
-    workflow_ids: ['TODO_WORKFLOW_ID']
-    zooniverse_id: 'TODO_ZOONIVERSE_ID'
+    workflow_ids: ['5432c7433ae7404eca000001']
+    zooniverse_id: 'AFR00002ak'
 
   subject.select()
