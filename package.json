@@ -16,6 +16,7 @@
   "scripts": {
     "start": "zooniverse-readymade serve --port 5319 --css ./project.styl --js custom.coffee",
     "stage": "npm run build && publisssh ./build demo.zooniverse.org/first-responders && npm run clean-up",
+    "deploy-beta": "npm run build && publisssh ./build zooniverse-static/www.planetaryresponsenetwork.com/beta && npm run clean-up",
     "build": "zooniverse-readymade build --force --output ./build --css ./project.styl --js custom.coffee",
     "deploy": "npm run build && publisssh ./build zooniverse-static/www.planetaryresponsenetwork.com && npm run clean-up",
     "clean-up": "trash ./build"
