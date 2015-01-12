@@ -2,7 +2,7 @@
 
 module.exports =
   id: 'first_responder'
-  background: 'http://upload.wikimedia.org/wikipedia/commons/7/75/Sign_first_aid.svg'
+  background: './background.jpg'
 
   producer: 'Typhoon Haiyan (Yolanda)'
   title: 'The Planetary Response Network: Beta'
