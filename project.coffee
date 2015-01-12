@@ -9,6 +9,23 @@ module.exports =
   summary: 'Join the relief effort to help crisis victims'
   description: 'Your help is needed to examine the affected areas and help humanitarian organizations provide aid.'
 
+  organizations: [{
+    image: './orgs/qcri.png'
+    name: 'QCRI'
+    web: 'http://www.qcri.com/'
+    # description: 'TODO'
+  }, {
+    image: './orgs/planet-labs.png'
+    name: 'Planet Labs'
+    web: 'https://www.planet.com/'
+    # description: 'TODO'
+  }, {
+    image: './orgs/dgf.png'
+    name: 'Digital Globe Foundation'
+    web: 'http://www.digitalglobefoundation.org/'
+    # description: 'TODO'
+  }]
+
   tasks:
     features:
       type: 'drawing',
