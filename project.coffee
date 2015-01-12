@@ -15,18 +15,18 @@ module.exports =
   organizations: [{
     image: './orgs/qcri.png'
     name: 'QCRI'
-    web: 'http://www.qcri.com/'
-    # description: 'TODO'
+    url: 'http://www.qcri.com/'
+    description: 'TODO'
   }, {
     image: './orgs/planet-labs.png'
     name: 'Planet Labs'
-    web: 'https://www.planet.com/'
-    # description: 'TODO'
+    url: 'https://www.planet.com/'
+    description: 'TODO'
   }, {
     image: './orgs/dgf.png'
     name: 'Digital Globe Foundation'
-    web: 'http://www.digitalglobefoundation.org/'
-    # description: 'TODO'
+    url: 'http://www.digitalglobefoundation.org/'
+    description: 'TODO'
   }]
 
   tasks:
