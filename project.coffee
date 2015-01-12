@@ -16,17 +16,17 @@ module.exports =
     image: './orgs/qcri.png'
     name: 'QCRI'
     url: 'http://www.qcri.com/'
-    description: 'TODO'
+    description: 'Qatar Computing Research Institute QCRI) is a national research institute) established in 2010 by Qatar Foundation for Education, Science and Community Development. QCRI\'s vision is to be a global leader of computing research in identified areas that will bring positive impact to the lives of citizens and society.'
   }, {
     image: './orgs/planet-labs.png'
     name: 'Planet Labs'
     url: 'https://www.planet.com/'
-    description: 'TODO'
+    description: 'Planet creates commercial and humanitarian value with the market\'s most capable global imaging network. Fresh data from any place on Earth is foundational to solving commercial, environmental, and humanitarian challenges. Planet is committed to providing satellite imagery for humanitarian efforts by the Planetary Response Network.'
   }, {
     image: './orgs/dgf.png'
     name: 'Digital Globe Foundation'
     url: 'http://www.digitalglobefoundation.org/'
-    description: 'TODO'
+    description: 'The DigitalGlobe Foundation is a 501(c)(3) non-profit organization established on the belief that they have a unique opportunity to share DigitalGlobe\'s technology and resources to help train others to map, monitor, and measure the Earth. The DigitalGlobe Foundation is providing all pre-crisis imagery for PRN\'s pilot project.'
   }]
 
   tasks:
