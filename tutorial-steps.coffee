@@ -168,7 +168,7 @@ tutorialSteps =
   # skip during the tutorial. Telling them to click "Done" and then "No" seems awkward. Can we do it automatically?
   callOutHelp:
     content: '''
-      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp from from other, similar structures.
+      The spotter’s guide below gives tips and examples of important features, including how to tell a tarp from other, similar structures.
     '''
     attachment: [0.5, 1, '.marking-surface', 0.5, 0.95]
     arrow: 'bottom'
