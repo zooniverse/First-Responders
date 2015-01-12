@@ -9,6 +9,9 @@ module.exports =
   summary: 'Join the relief effort to help crisis victims'
   description: 'Your help is needed to examine the affected areas and help humanitarian organizations provide aid.'
 
+  externalLinks:
+    'Feedback': 'https://docs.google.com/forms/d/1TTAMMKpdzwFxxiyWKjllUk07qROQ6SnETHk8GZeCm9s/viewform'
+
   organizations: [{
     image: './orgs/qcri.png'
     name: 'QCRI'
