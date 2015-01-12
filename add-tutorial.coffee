@@ -18,3 +18,18 @@ classifyPage.startTutorial = ->
   loadTutorialSubject()
   @tutorial.start()
   @trigger @START_TUTORIAL, this, @tutorial
+
+talkText = classifyPage.summary.existingCommentsText.parent()
+dontTalkButton = classifyPage.summary.el.find '[name="readymade-dont-talk"]'
+originalButtonContent = dontTalkButton.html()
+
+TUTORIAL_CONTINUE_TEXT = 'Continue'
+
+classifyPage.on classifyPage.LOAD_SUBJECT, (e, subject) ->
+  talkText.toggle not subject.tutorial
+  classifyPage.summary.talkLink.toggle not subject.tutorial
+
+  dontTalkButton.html if subject.tutorial
+    TUTORIAL_CONTINUE_TEXT
+  else
+    originalButtonContent
