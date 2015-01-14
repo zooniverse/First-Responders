@@ -16,7 +16,7 @@ module.exports =
     image: './orgs/qcri.png'
     name: 'QCRI'
     url: 'http://www.qcri.com/'
-    description: 'Qatar Computing Research Institute QCRI) is a national research institute) established in 2010 by Qatar Foundation for Education, Science and Community Development. QCRI\'s vision is to be a global leader of computing research in identified areas that will bring positive impact to the lives of citizens and society.'
+    description: 'Qatar Computing Research Institute (QCRI) is a national research institute established in 2010 by the Qatar Foundation for Education, Science and Community Development. QCRI\'s vision is to be a global leader of computing research in identified areas that will bring positive impact to the lives of citizens and society.'
   }, {
     image: './orgs/planet-labs.png'
     name: 'Planet Labs'
@@ -26,7 +26,7 @@ module.exports =
     image: './orgs/dgf.png'
     name: 'Digital Globe Foundation'
     url: 'http://www.digitalglobefoundation.org/'
-    description: 'The DigitalGlobe Foundation is a 501(c)(3) non-profit organization established on the belief that they have a unique opportunity to share DigitalGlobe\'s technology and resources to help train others to map, monitor, and measure the Earth. The DigitalGlobe Foundation is providing all pre-crisis imagery for PRN\'s pilot project.'
+    description: 'The DigitalGlobe Foundation is a 501(c)(3) non-profit organization established on the belief that they have a unique opportunity to share DigitalGlobe\'s technology and resources to help train others to map, monitor, and measure the Earth. The DigitalGlobe Foundation provided pre-crisis imagery for PRN\'s pilot project.'
   }]
 
   tasks:
