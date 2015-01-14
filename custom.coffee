@@ -1,5 +1,6 @@
 require './classifier'
 require './add-tutorial'
 require './relabel-favorite-button'
+require './relabel-ok-button'
 require './add-not-live-note'
 require './credit-digital-globe'
